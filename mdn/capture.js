@@ -68,7 +68,8 @@ function sendFile (data) {
             alert(result);
         },
         error: function (err) {
-            alert(err);
+            alert('ERROR');
+            alert(JSON.stringify(err));
         }
 
     });
