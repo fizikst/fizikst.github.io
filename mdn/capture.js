@@ -66,6 +66,9 @@ function sendFile (data) {
         contentType: "application/x-www-form-urlencoded",
         success: function (result) {
             alert(result);
+        },
+        error: function (err) {
+            alert(err);
         }
 
     });
