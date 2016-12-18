@@ -63,6 +63,8 @@ function sendFile (data) {
         data: { img_data:data, drivers_id:10 },
         cache: false,
         async:false,
+        crossDomain: true,
+        processData: false,
         contentType: "application/x-www-form-urlencoded",
         success: function (result) {
             alert(result);
