@@ -2,6 +2,8 @@
     <title>WebRTC: Still photo capture demo</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="main.css" type="text/css" media="all">
+    <script src="capture.js">
+    </script>
     <link href="shared.css"></head>
 <body>
 <div class="contentarea">
@@ -11,11 +13,6 @@
     <p>
         This example demonstrates how to set up a media stream using your built-in webcam, fetch an image from that stream, and create a PNG using that image.
     </p>
-
-    <div class="select">
-        <label for="videoSource">Video source: </label><select id="videoSource"></select>
-    </div>
-
     <div class="camera">
         <video id="video" src="" width="320" height="240">Video stream not available.</video>
         <button id="startbutton">Take photo</button>
@@ -31,8 +28,4 @@
 </div>
 <div class="mdn-footer">All text content on MDN is offered under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC-SA-BY</a> license, version 2.5 or later. All sample code offered on this site is provided under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (Public Domain)</a> license and may be reused or repurposed without attribution.</div>
 
-</body>
-<script src="capture.js"></script>
-
-
-</html>
+</body></html>
