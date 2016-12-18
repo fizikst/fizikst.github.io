@@ -44,6 +44,7 @@ console.log(document.location, query);
 function sendFile (data) {
     alert(data);
 
+/*
     $.ajax({
         type: "POST",
         url: "http://35.162.213.153/drivers/photoSave",
@@ -55,6 +56,7 @@ function sendFile (data) {
         }
 
     });
+*/
 }
 
 function takepicture() {
