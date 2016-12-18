@@ -42,6 +42,8 @@ var query = getQueryParams(document.location.search);
 console.log(document.location, query);
 
 function sendFile (data) {
+    alert(data);
+
     $.ajax({
         type: "POST",
         url: "http://35.162.213.153/drivers/photoSave",
