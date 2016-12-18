@@ -39,7 +39,7 @@ function getQueryParams(qs) {
 }
 
 var query = getQueryParams(document.location.search);
-alert(query);
+console.log(document.location, query);
 
 function takepicture() {
     var context = canvas.getContext('2d');
