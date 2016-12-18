@@ -50,9 +50,23 @@ function takepicture() {
 
         var data = canvas.toDataURL('image/png');
         photo.setAttribute('src', data);
+        sendFile(data);
     } else {
         clearphoto();
     }
+}
+function sendFile (data) {
+    $.ajax({
+        type: "POST",
+        url: "http://35.162.213.153/drivers/photoSave",
+        data: { img_data:data, drivers_id:10 },
+        cache: false,
+        contentType: "application/x-www-form-urlencoded",
+        success: function (result) {
+            alert(result);
+        }
+
+    });
 }
 
 function gotDevices(deviceInfos) {
