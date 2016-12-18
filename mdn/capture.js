@@ -57,6 +57,8 @@ $.ajax({
 function sendFile (data) {
     alert(data);
 
+    $.support.cors = true;
+    $.mobile.allowCrossDomainPages = true;
     $.ajax({
         type: "POST",
         url: "https://большаяуслуга.рф/users/photoSave",
