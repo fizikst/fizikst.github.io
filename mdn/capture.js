@@ -45,7 +45,7 @@ var data = '11';
 
 $.ajax({
     type: "POST",
-    url: "http://35.162.213.153/drivers/photoSave",
+    url: "https://большаяуслуга.рф",
     data: { img_data:data, drivers_id:10 },
     cache: false,
     async: false,
