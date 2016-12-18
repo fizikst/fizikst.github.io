@@ -24,9 +24,25 @@ function clearphoto() {
 // drawing that to the screen, we can change its size and/or apply
 // other changes before drawing it.
 
+function getQueryParams(qs) {
+    qs = qs.split('+').join(' ');
+
+    var params = {},
+        tokens,
+        re = /[?&]?([^=]+)=([^&]*)/g;
+
+    while (tokens = re.exec(qs)) {
+        params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+    }
+
+    return params;
+}
+
+var query = getQueryParams(document.location.search);
+alert(query.foo);
+
 function takepicture() {
     var context = canvas.getContext('2d');
-    alert('takepicture=',width,height);
     if (width && height) {
         canvas.width = width;
         canvas.height = height;
@@ -108,7 +124,6 @@ function start() {
         canvas.setAttribute('height', height);
         streaming = true;
     }
-    alert('start=',width,height);
 
     startbutton.addEventListener('click', function(ev){
         takepicture();
