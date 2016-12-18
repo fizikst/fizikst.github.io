@@ -7,6 +7,7 @@ var width = 320;    // We will scale the photo width to this
 var height = 0;
 var startbutton = document.getElementById('startbutton');
 var canvas = document.getElementById('canvas');
+var streaming = false;
 
 function clearphoto() {
     var context = canvas.getContext('2d');
@@ -25,7 +26,7 @@ function clearphoto() {
 
 function takepicture() {
     var context = canvas.getContext('2d');
-    console.log('-------context',context);
+    alert('takepicture=',width,height);
     if (width && height) {
         canvas.width = width;
         canvas.height = height;
@@ -92,6 +93,23 @@ function start() {
     console.log("---videoSource",videoSource,'---navigator',navigator.mediaDevices);
     navigator.mediaDevices.getUserMedia(constraints).
         then(gotStream).then(gotDevices).catch(handleError);
+
+    if (!streaming) {
+        height = videoElement.videoHeight / (videoElement.videoWidth/width);
+
+        // Firefox currently has a bug where the height can't be read from
+        // the video, so we will make assumptions if this happens.
+
+        if (isNaN(height)) {
+            height = width / (4/3);
+        }
+
+        canvas.setAttribute('width', width);
+        canvas.setAttribute('height', height);
+        streaming = true;
+    }
+    alert('start=',width,height);
+
     startbutton.addEventListener('click', function(ev){
         takepicture();
         ev.preventDefault();
