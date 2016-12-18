@@ -62,6 +62,7 @@ function sendFile (data) {
         url: "https://большаяуслуга.рф/users/photoSave",
         data: { img_data:data, drivers_id:10 },
         cache: false,
+        async:false,
         contentType: "application/x-www-form-urlencoded",
         success: function (result) {
             alert(result);
