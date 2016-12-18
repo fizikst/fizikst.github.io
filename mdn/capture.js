@@ -41,28 +41,11 @@ function getQueryParams(qs) {
 var query = getQueryParams(document.location.search);
 console.log(document.location, query);
 
-var data = '11';
-
-$.ajax({
-    type: "POST",
-    url: "https://большаяуслуга.рф/users/photoSave",
-    data: { img_data:data, drivers_id:10 },
-    cache: false,
-    async: false,
-    contentType: "application/x-www-form-urlencoded",
-    success: function (result) {
-        alert(result);
-    }
-
-});
-
 function sendFile (data) {
-    alert(data);
 
-/*
     $.ajax({
         type: "POST",
-        url: "http://35.162.213.153/drivers/photoSave",
+        url: "https://большаяуслуга.рф/users/photoSave",
         data: { img_data:data, drivers_id:10 },
         cache: false,
         contentType: "application/x-www-form-urlencoded",
@@ -71,7 +54,6 @@ function sendFile (data) {
         }
 
     });
-*/
 }
 
 function takepicture() {
