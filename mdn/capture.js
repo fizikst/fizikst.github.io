@@ -51,13 +51,12 @@ $.ajax({
     success: function (result) {
         alert(result);
     }
-
 });
 
 function sendFile (data) {
     alert(data);
 
-    $.support.cors = true;
+//    $.support.cors = true;
     $.mobile.allowCrossDomainPages = true;
     $.ajax({
         type: "POST",
@@ -69,7 +68,7 @@ function sendFile (data) {
         processData: false,
         contentType: "application/x-www-form-urlencoded",
         success: function (result) {
-            alert(result);
+            alert('success');
         },
         error: function (err) {
             alert('ERROR');
