@@ -61,11 +61,11 @@ function sendFile (data) {
         type: "POST",
         url: "https://большаяуслуга.рф/users/photoSave",
         data: { img_data:data, drivers_id:10 },
-        dataType: "JSONP",
-//        cache: false,
+//        dataType: "JSONP",
+        cache: false,
         async:false,
-//        crossDomain: true,
-//        processData: false,
+        crossDomain: true,
+        processData: false,
         contentType: "application/x-www-form-urlencoded",
         success: function (result) {
             alert('success');
