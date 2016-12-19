@@ -56,7 +56,7 @@ $.ajax({
 function sendFile (data) {
     alert(data);
 
-//    $.support.cors = true;
+    $.support.cors = true;
     $.mobile.allowCrossDomainPages = true;
     $.ajax({
         type: "POST",
