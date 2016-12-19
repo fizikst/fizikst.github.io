@@ -63,7 +63,7 @@ function sendFile (data) {
         data: { img_data:data, drivers_id:10 },
         dataType: "JSONP",
 //        cache: false,
-//        async:false,
+        async:false,
 //        crossDomain: true,
 //        processData: false,
         contentType: "application/x-www-form-urlencoded",
