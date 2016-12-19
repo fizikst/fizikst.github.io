@@ -56,19 +56,20 @@ $.ajax({
 function sendFile (data) {
     alert(data);
 
-    $.support.cors = true;
     $.mobile.allowCrossDomainPages = true;
     $.ajax({
         type: "POST",
         url: "https://большаяуслуга.рф/users/photoSave",
         data: { img_data:data, drivers_id:10 },
-        cache: false,
-        async:false,
-        crossDomain: true,
-        processData: false,
+        dataType: "JSONP",
+//        cache: false,
+//        async:false,
+//        crossDomain: true,
+//        processData: false,
         contentType: "application/x-www-form-urlencoded",
         success: function (result) {
             alert('success');
+            alert(JSON.stringify(result));
         },
         error: function (err) {
             alert('ERROR');
