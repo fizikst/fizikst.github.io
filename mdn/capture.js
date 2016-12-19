@@ -58,7 +58,7 @@ function sendFile (data) {
 
     $.mobile.allowCrossDomainPages = true;
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: "https://большаяуслуга.рф/users/photoSave",
         data: { img_data:data, drivers_id:10 },
 //        dataType: "JSONP",
